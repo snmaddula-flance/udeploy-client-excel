@@ -1,0 +1,62 @@
+team: CVM
+appName: INTERATIONDELETELISTENER
+appEAI: app-eai
+resourceGroup: ECDC
+
+components: 
+  - componentName: INTETACTION
+    componentDesc: desc
+    componentPath: path
+    componentAppName: appName
+    componentDeployDir: dir
+    componentDiskSpace: ds
+    componentSudoUser: sudoUser
+  - componentName: INTETACTION
+    componentDesc: desc
+    componentPath: path
+    componentAppName: appName
+    componentDeployDir: dir
+    componentDiskSpace: ds
+    componentSudoUser: sudoUser
+
+dataCenters:
+  - name: EDC
+    resourceMap:
+      L1:
+      L2:
+      L3:
+      L4:
+      L5:
+      LP:
+  - name: WTC
+    resourceMap:
+      L0:
+      L1:
+        - c0008914.test.cloud.fedex.com
+        - c0008915.test.cloud.fedex.com
+        - c0008916.test.cloud.fedex.com
+        - c0008917.test.cloud.fedex.com
+      L2:
+        - c0005195.test.cloud.fedex.com
+        - c0009462.test.cloud.fedex.com
+        - c0009463.test.cloud.fedex.com
+        - c0005377.test.cloud.fedex.com
+      L3:
+        - c0010256.test.cloud.fedex.com
+        - c0010257.test.cloud.fedex.com
+        - c0010258.test.cloud.fedex.com
+        - c0010259.test.cloud.fedex.com
+      L4:
+        - c0010546.test.cloud.fedex.com
+        - c0010547.test.cloud.fedex.com
+        - c0010548.test.cloud.fedex.com
+        - c0010549.test.cloud.fedex.com
+        - c0010550.test.cloud.fedex.com
+        - c0010551.test.cloud.fedex.com
+        - c0010551.test.cloud.fedex.com
+        - c0010552.test.cloud.fedex.com
+        - c0010553.test.cloud.fedex.com
+        - c0010554.test.cloud.fedex.com
+        - c0010555.test.cloud.fedex.com
+        - c0010556.test.cloud.fedex.com
+        - c0010557.test.cloud.fedex.com

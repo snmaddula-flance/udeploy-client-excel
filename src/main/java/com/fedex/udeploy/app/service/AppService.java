@@ -7,7 +7,6 @@ import javax.annotation.PostConstruct;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -103,9 +102,9 @@ public class AppService {
 
 	@PostConstruct
 	public void logConfig() throws JsonProcessingException {
-		System.out.println("\n==================================== UDEPLOY CONFIG =====================================");
+		System.out.println("\n========================================= UDEPLOY CONFIG ==========================================");
 		System.out.println("\n" + writer.writeValueAsString(udeploy));
-		System.out.println("\n=========================================================================================\n");
+		System.out.println("\n===================================================================================================\n");
 	}
 	
 	private void shutdown() {

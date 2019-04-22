@@ -47,8 +47,7 @@ public class EnvironmentService {
 			    put("CL3","#D9182D");
 			}
 		};
-		/////
-		System.out.println(">>>>>>>>>>>>>>>>>>>> \n" + envColors);
+//		System.out.println(">>>>>>>>>>>>>>>>>>>> \n" + envColors);
 	}
 	
 	public void createEnvironment(String appName, String level) {

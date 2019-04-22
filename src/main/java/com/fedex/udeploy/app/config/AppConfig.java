@@ -1,9 +1,6 @@
 package com.fedex.udeploy.app.config;
 
 import java.io.IOException;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
 import javax.net.ssl.SSLContext;
 
@@ -35,8 +32,7 @@ public class AppConfig {
 				return false;
 			}
 
-			public void handleError(ClientHttpResponse response) throws IOException {
-			}
+			public void handleError(ClientHttpResponse response) throws IOException {}
 		});
 		return restTemplate;
 	}
@@ -48,16 +44,10 @@ public class AppConfig {
 		return mapper.writerWithDefaultPrettyPrinter();
 	}
 
-	private ClientHttpRequestFactory clientHttpRequestFactory()
-			throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+	private ClientHttpRequestFactory clientHttpRequestFactory() throws Exception {
 		final TrustStrategy acceptingTrustStrategy = (chain, authType) -> true;
 		final SSLContext sslContext = SSLContexts.custom().loadTrustMaterial(null, acceptingTrustStrategy).build();
-		final HttpClient httpClient = HttpClients.custom()
-				.setSSLSocketFactory(new SSLConnectionSocketFactory(sslContext)).build();
-		return new HttpComponentsClientHttpRequestFactory() {
-			{
-				setHttpClient(httpClient);
-			}
-		};
+		final HttpClient httpClient = HttpClients.custom().setSSLSocketFactory(new SSLConnectionSocketFactory(sslContext)).build();
+		return new HttpComponentsClientHttpRequestFactory(httpClient);
 	}
 }
