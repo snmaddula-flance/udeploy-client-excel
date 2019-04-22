@@ -1,0 +1,14 @@
+mvn clean package
+
+java -jar target/udeploy-cli.jar --input-file=C:\Users\3710531\Desktop\Vaishnavi\uDeploy\appSheets\INTERACTION-TEST.xlsx
+
+############ 
+By default the program will assume that first sheet is "App" (i.e index 1) and second sheet is "Component" (i.e index 2).
+
+In case if you have these sheets at different indexes, pass that information to the progam using the below arguments:
+--app-index=<> --sheet-index=
+
+
+java -jar udeploy-cli.jar --port=8181 --input-file=C:\Users\3710531\Desktop\Vaishnavi\uDeploy\appSheets\INTERACTION-TEST.xlsx --spring.profiles.active=prod2 --username=Username --password=Password
+
+java -jar udeploy-cli.jar --port=8181 --spring-profiles-active=prod2 --username=3710531 --password=Blingo12 --input-file=C:\Users\3710531\Desktop\vaish\Vaishnavi\uDeploy\appSheets\INTERACTION-TEST.xlsx
