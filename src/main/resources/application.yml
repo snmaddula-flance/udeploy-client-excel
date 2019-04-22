@@ -1,0 +1,21 @@
+server:
+  port: ${port}
+
+manifest:
+  base-url: http://udeploy.test.cloud.fedex.com:8080
+  create-tag-uri: /cli/resource/tag
+  check-team-uri: /cli/team/info
+  check-resource-uri: /cli/resource
+  create-resource-uri: /cli/resource/create 
+  create-team-uri: /cli/agentCLI/teams
+  add-team-uri: /cli/component/teams
+  create-component-uri: /cli/component/create
+  create-application-uri: /cli/application/create
+  create-environment-uri: /cli/environment/createEnvironment
+  add-component-to-app-uri: /cli/application/addComponentToApp
+  add-base-resource-to-env-uri: /cli/environment/addBaseResource
+  add-application-property-uri: /cli/application/propValue
+  add-component-property-uri: /cli/component/propValue
+  add-environment-to-team-uri: /cli/environment/teams
+  username: ${username}
+  password: ${password} 
